@@ -119,7 +119,9 @@ const Pet = () => {
                         <div className="d-flex w-100 justify-content-between">
                             <h5 className="mb-1">{treatment.data.created.toDate().toString()}</h5>
                         </div>
+          <option></option>
                         <p className="mb-1">{treatment.data.treatment}</p>
+                        <p className="mb-1">{treatment.data.medicine}</p>
                     </a>
                     ))
                 }
