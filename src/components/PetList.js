@@ -62,7 +62,7 @@ const PetList = () => {
                 return <FaDog style={{ fontSize: 30, marginRight: 5, paddingBottom: 5 }} />;
             case 'แมว':
                 return <FaCat style={{ fontSize: 30, marginRight: 5, paddingBottom: 5 }} />;
-            case 'กระต่าย':
+            case 'เสือ':
                 return <GiRabbitHead style={{ fontSize: 30, marginRight: 5, paddingBottom: 5 }} />;
             default:
                 return <TbDogBowl style={{ fontSize: 30, marginRight: 5, paddingBottom: 5 }} />;

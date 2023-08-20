@@ -22,7 +22,7 @@ function Modal({open, modalLable, children, custom_modal, onClose}) {
       </div>
     )
   }
-  return null
+  return <></>
 }
 
 export default Modal

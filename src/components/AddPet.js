@@ -11,7 +11,7 @@ function AddPet({onClose, open}) {
   const [owner, setOwner] = useState('');
   const [picture, setPicture] = useState('');
   const [description, setDescription] = useState('');
-
+  const [sex, setSex] = useState("");
   const [owners, setOwners] = useState([])
 
   /* function to add new pet to firestore */
@@ -32,7 +32,8 @@ function AddPet({onClose, open}) {
                 owner: owner,
                 type: type,
                 picture: url,
-                description: description
+                description: description,
+                sex
               })
               onClose()
             });
@@ -42,6 +43,7 @@ function AddPet({onClose, open}) {
         addDoc(collection(db, 'pets'), {
           name: name,
           owner: owner,
+          sex
         })
         onClose()
       }
@@ -75,6 +77,12 @@ function AddPet({onClose, open}) {
           <option value="แมว">แมว</option>
           <option value="กระต่าย">กระต่าย</option>
           <option value="อื่นๆ">อื่นๆ</option>
+        </select>
+        <select value={sex} class="form-select" onChange={(e) => setSex(e.target.value)}> 
+          <option value="" selected>เลือกเพศของสัตว์</option>
+          <option value="ตัวผู้">เพศผู้</option>
+          <option value="ตัวเมีย">เพศเมีย</option>
+          <option value="อื่นๆ">อื่นๆ</option>ห
         </select>
         <select value={owner} class="form-select" onChange={(e) => setOwner(e.target.value)}>
           <option value="0" selected>เลือกเจ้าของ</option>

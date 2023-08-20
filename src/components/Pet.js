@@ -103,11 +103,15 @@ const Pet = () => {
                 </h3>
                 <p className="lead"><b>เจ้าของ: </b>{owner}</p>
                 <p className="lead">{pet.description}</p>
+                <p className="lead"><b>เพศ: </b>{pet.sex}</p>
                 <div className="btn-group" role="group">
                     <button type="button" className="btn btn-outline-success" onClick={() => setOpenAddModal(true)}><TbCirclePlus style={{ fontSize: 25, paddingBottom: 3 }} /> เพิ่มประวัติการรักษา</button>
                     <button type="button" className="btn btn-outline-secondary" onClick={() => setOpenEditModal(true)}><TbEdit style={{ fontSize: 25, paddingBottom: 3 }} /> แก้ไขข้อมูล</button>
                     <button type="button" className="btn btn-outline-danger" onClick={() => deletePet(petId)}><TbCircleX style={{ fontSize: 25, paddingBottom: 3 }} /> ลบข้อมูล</button>
+                    <button type="button" className="btn btn-outline-success" onClick={() => setOpenAddModal(true)}><TbCirclePlus style={{ fontSize: 25, paddingBottom: 3 }} /> เพิ่มเพศสัตว์</button>
+
                 </div>
+                
                 <div className="list-group" style={{ marginTop: 10 }}>
                 {
                     treatments?.map((treatment, i) => (

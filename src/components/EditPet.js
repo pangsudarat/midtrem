@@ -77,6 +77,8 @@ function EditPet({onClose, open, id, petName, petType, petOwner, petPicture, pet
           <option value="กระต่าย">กระต่าย</option>
           <option value="อื่นๆ">อื่นๆ</option>
         </select>
+
+  
         <select value={owner} class="form-select" onChange={(e) => setOwner(e.target.value)}>
           <option value="0" selected>เลือกเจ้าของ</option>
           {
@@ -85,7 +87,7 @@ function EditPet({onClose, open, id, petName, petType, petOwner, petPicture, pet
             ))
           }
         </select>
-        <input class="form-control file" type="file" accept="image/*" onChange={(e) => setPicture(e.target.files[0])} />
+        <input className="form-control file" type="file" accept="image/*" onChange={(e) => setPicture(e.target.files[0])} />
         <textarea 
           onChange={(e) => setDescription(e.target.value)}
           placeholder='รายละเอียด'

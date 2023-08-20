@@ -5,14 +5,15 @@ import Pet from './components/Pet';
 import OwnerList from './components/OwnerList';
 import { Route, Routes } from "react-router-dom";
 import { TbDogBowl, TbHome, TbIdBadge2, TbUser } from "react-icons/tb";
+import Medicine from './components/Medicine';
 
 function App() {
   return (
           <>
-            <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-warning">
               <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                  <TbDogBowl style={{ color: "#FFFFFF", fontSize: 30, marginRight: 5, paddingBottom: 5 }} />
+                  <TbDogBowl style={{ color: "", fontSize: 30, marginRight: 5, paddingBottom: 5 }} />
                   <b>Pet Clinic</b></a>
               </div>
             </nav>
@@ -20,7 +21,7 @@ function App() {
               <div className="d-flex flex-column flex-shrink-0 p-3 bg-light" style={{ width: 230 }}>
                 <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                   <span className="fs-4">
-                    <TbDogBowl style={{ color: "#000000", fontSize: 30, marginRight: 5, paddingBottom: 5 }} />
+                    <TbDogBowl style={{ color: "008080", fontSize: 30, marginRight: 5, paddingBottom: 5 }} />
                     <b>Pet Clinic</b>
                   </span>
                 </a>
@@ -38,10 +39,17 @@ function App() {
                       <b>รายชื่อสัตว์</b>
                     </a>
                   </li>
+                 
                   <li>
                     <a href="/owners" className="nav-link link-dark" aria-current="page">
                       <TbUser style={{ fontSize: 30, marginRight: 5, paddingBottom: 5 }} />
                       <b>รายชื่อเจ้าของ</b>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="nav-link link-dark" aria-current="page">
+                      <TbUser style={{ fontSize: 30, marginRight: 5, paddingBottom: 5 }} /> 
+                      <b>ยารักษาโรค</b>   
                     </a>
                   </li>
                 </ul>
@@ -52,10 +60,11 @@ function App() {
                   <Route path="/pets" element={<PetList />} />
                   <Route path="/pet/view/:id" element={<Pet />} />
                   <Route path="/owners" element={<OwnerList />} />
+                  <Route path="/medicine" element={<Medicine />} />
                 </Routes>
               </main>
             </div>
-            <nav className="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+            <nav className="navbar fixed-bottom navbar-expand-sm navbar-dark bg-info">
               <div className="container-fluid">
                 <a className="navbar-brand" href="#">Footer</a>
               </div>
