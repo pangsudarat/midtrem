@@ -47,7 +47,7 @@ function App() {
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="nav-link link-dark" aria-current="page">
+                    <a href="/medicine" className="nav-link link-dark" aria-current="page">
                       <TbUser style={{ fontSize: 30, marginRight: 5, paddingBottom: 5 }} /> 
                       <b>ยารักษาโรค</b>   
                     </a>
